@@ -30,7 +30,7 @@ public class StringToInteger {
                     return Integer.MIN_VALUE;
                 }
             }
-            base = base * 10 + str.charAt(i) - '0';
+            base = str.charAt(i) - '0' + base * 10;
             i += 1;
         }
         return sign * base;
