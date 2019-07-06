@@ -20,6 +20,13 @@ public class SwapNodesInPairs {
 
     /**
      * Solution 1
+     *
+     * 交换顺序的流程如下：("="指的是赋值，"->"指的是next指向)
+     *   temp = pre.next.next
+     *   pre.next -> temp.next
+     *   temp -> pre.next
+     *   pre -> temp
+     *   pre = temp.next
      */
     public ListNode swapPairs(ListNode head) {
         ListNode dummy = new ListNode(0);
