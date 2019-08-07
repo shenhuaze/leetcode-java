@@ -36,12 +36,7 @@ public class MergeIntervals {
     }
 
     public static void main(String[] args) {
-        int[][] intervals = {
-                {1, 3},
-                {2, 6},
-                {8, 10},
-                {15, 18}
-        };
+        int[][] intervals = {{1, 3}, {2, 6}, {8, 10}, {15, 18}};
         int[][] results = new MergeIntervals().merge(intervals);
         for (int[] interval : results) {
             System.out.println(interval[0] + " " + interval[1]);
