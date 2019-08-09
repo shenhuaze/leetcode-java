@@ -27,7 +27,7 @@ public class InsertInterval {
             resultList.add(intervals[index]);
             index += 1;
         }
-        if (index == 0 || resultList.get(resultList.size() - 1)[1] < newStart) {
+        if (resultList.isEmpty() || resultList.get(resultList.size() - 1)[1] < newStart) {
             resultList.add(newInterval);
         } else {
             int lastIndex = resultList.size() - 1;
