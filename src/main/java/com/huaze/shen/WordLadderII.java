@@ -17,14 +17,13 @@ public class WordLadderII {
         Map<String, List<String>> neighbors = new HashMap<>();
         Map<String, Integer> distances = new HashMap<>();
         dict.add(beginWord);
-        bfs(beginWord, endWord, dict, neighbors, distances);
+        bfs(endWord, dict, neighbors, distances);
         dfs(paths, path, beginWord, endWord, neighbors, distances);
         return paths;
     }
 
     // 从endWord开始做bfs
-    private void bfs(String beginWord,
-                     String endWord,
+    private void bfs(String endWord,
                      Set<String> dict,
                      Map<String, List<String>> neighbors,
                      Map<String, Integer> distances) {
@@ -82,7 +81,7 @@ public class WordLadderII {
         }
         path.remove(path.size() - 1);
     }
-    
+
     public static void main(String[] args) {
         //String[] words = {"hot", "dot", "dog", "lot", "log", "cog"};
         String[] words = {"hot","dot","dog","lot","log"};
